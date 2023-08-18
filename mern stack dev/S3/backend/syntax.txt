@@ -1,0 +1,14 @@
+to install 
+    " npm i express"
+
+
+then 
+
+    "node index "  to run the backend
+
+to start 
+   " npm init -y"
+   
+
+to install Nodemon
+  "npm i nodemon"
