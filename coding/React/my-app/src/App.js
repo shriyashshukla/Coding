@@ -1,14 +1,14 @@
-
+import Home from './compo/Home.js'
+import Navbar from './compo/Navbar.js';
 import './App.css';
 
 function App() {
   return (
-   <><nav>
-    <li>home</li>
-    <li>contact</li>
-    <li>about us</li>
-   </nav>
-   </>
+    <div>
+<Navbar/>
+   <Home/>
+    </div>
+    
   );
 }
 
