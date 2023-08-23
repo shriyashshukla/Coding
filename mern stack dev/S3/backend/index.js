@@ -1,43 +1,37 @@
 // import express
 const express = require('express');
 
-const userRouter=require('./routers/userRouter');
+const userRouter = require('./routers/userRouter');
 
+// initialize express
+const app = express();
+const port = 5000;
 
-//initialize express
- const app= express();
- const port = 5000;
+// middlewares
+app.use(express.json());
 
-// mid
-app.use('/user',userRouter);
+app.use( '/user', userRouter );
 
-app.get('/', (req,res) =>{
-        res.send("ayush")
-
+// routes
+app.get('/', (req, res) => {
+    res.send('response from index');
 });
- //home
-app.get('/home', (req,res) =>{
+
+app.get('/home', (req, res) => {
     res.send('response from home');
+});
 
-
-})
-
-
-//add
-
-app.get('/add', (req,res) =>{
+app.get('/add', (req, res) => {
     res.send('response from add');
+});
 
+app.get('/getall', (req, res) => {
+    res.send('response from getall');
+});
 
-})
+// home
+// add
 // getall
-app.get('/getall', (req,res) =>{
-    res.send('shriyash get all ');
 
-
-})
-
- // starting server 
- app.listen(port,()=>{console.log('server started')});
-
-
+// starting the server
+app.listen( port, () => { console.log('express server started') } );

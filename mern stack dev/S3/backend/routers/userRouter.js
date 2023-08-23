@@ -1,25 +1,33 @@
-const express = require('express');
+const express = require("express");
+const Model = require('../models/userModel');
 
 const router = express.Router();
- router.get('/add',(req,res)=>{
-    res.send('response from user Router');
- })
 
- // getall 
-router.get('/getall', (req,res) =>{
-    res.send('response from getall');
-})
- //getbyemail
- router.get('/getbyemail', (req,res) =>{
-    res.send('response from getbyemail');
-})
- //getbyid
- router.get('/getbyid', (req,res) =>{
-    res.send('response from getbyid');
-})
- //update
- router.get('/update', (req,res) =>{
-    res.send('response from update');
- })
+router.post("/add", (req, res) => {
+  console.log(req.body);
+  res.send("response from add user Router");
+});
 
- module.exports=router;
+
+router.get("/getall", (req, res) => {
+  res.send("response from getall user Router");
+});
+
+router.get("/getbyemail", (req, res) => {
+  res.send("response from getbyemail user Router");
+});
+    
+router.get("/getbyid", (req, res) => {
+  res.send("response from getbyid user Router");
+});
+
+router.get("/update", (req, res) => {
+  res.send("response from update user Router");
+});
+
+// getall
+// getbyemail
+// getbyid
+// update
+
+module.exports = router;
