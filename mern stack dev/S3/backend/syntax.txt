@@ -8,7 +8,23 @@ then
 
 to start 
    " npm init -y"
-   
+
 
 to install Nodemon
   "npm i nodemon"
+
+
+
+changes in package.json 
+    add   "start":"node index",
+            "dev":"nodemon index"  
+
+    then run by using 
+    "npm run dev"
+
+
+
+    password id of monogoDb
+
+shriyash
+    hari
